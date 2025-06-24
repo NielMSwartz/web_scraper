@@ -10,7 +10,7 @@ import time
 from datetime import datetime
 
 SENDER = "nielswartz11@gmail.com"
-PASSWORD = "dluz groa ddnc qvad"
+PASSWORD = "Google_Password"
 RECEIVER = "nielswartz11@gmail.com"
 
 def send_mail(subject, body):
@@ -73,7 +73,7 @@ def fetch_all_prices(csv_file):
 
 def job():
     print(f"[{datetime.now()}] Running price check!")
-    results = fetch_all_prices("ps5_sites.csv")
+    results = fetch_all_prices("sites.csv")
     email_body = format_prices(results)
     send_mail("Weekly Prices", email_body)
     
